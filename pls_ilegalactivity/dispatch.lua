@@ -9,8 +9,8 @@ AddEventHandler("pls_ilegalactivity:client:signalToPolice",function(whatsignal)
             TriggerServerEvent('cd_dispatch:AddNotification', {
                 job_table = Config.PoliceJobs, 
                 coords = data.coords,
-                title = '10-XX - Scrap car',
-                message = 'A '..data.sex..' steals a car '..data.street, 
+                title = '10-XX - Rob ATM',
+                message = 'A '..data.sex..' robbing ATM '..data.street, 
                 flash = 0,
                 unique_id = tostring(math.random(0000000,9999999)),
                 blip = {
@@ -18,7 +18,7 @@ AddEventHandler("pls_ilegalactivity:client:signalToPolice",function(whatsignal)
                     scale = 1.2, 
                     colour = 3,
                     flashes = false, 
-                    text = '10-XX - Scrap car',
+                    text = '10-XX - Rob ATM',
                     time = (5*60*1000),
                     sound = 1,
                 }
