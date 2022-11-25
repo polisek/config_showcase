@@ -55,9 +55,18 @@ Config.lockPickItem = "lockpick"
 Config.termitItem = "termit"
 
 --------------------------------------------------------------------
+-- Shop setups
+---------------------------------------------------------------------
+Config.ShopPrices = {
+    screwdriver=50,
+    lockpick=60,
+    termit=800,
+}
+
+--------------------------------------------------------------------
 -- Set up a tool shop - If you need  - Buy lockpick and screwdriver
 ---------------------------------------------------------------------
-Config.CreateToolShop = false
+Config.CreateToolShop = true
 -- You buy screwdriver and lockpick
 Config.Toolmarket = {
     model = "a_m_m_farmer_01",
@@ -71,7 +80,7 @@ Config.Toolmarket = {
 ------------------------------------------------------
 -- Set up a black market - If you need  - Buy termit
 ------------------------------------------------------
-Config.CreateBlackMarket = false
+Config.CreateBlackMarket = true
 -- You buy termit
 Config.Blackmarket = {
     model = "a_m_m_farmer_01",
@@ -95,6 +104,7 @@ Config.ItemsPrice = {
 --------------------------------------------
 -- You sell scrap this NPC
 Config.Mechanic = {
+    create = true,
     model = "a_m_m_farmer_01",
     pos = vector4(-1170.5918, -2056.373, 14.3134, 190.4302),
 }
