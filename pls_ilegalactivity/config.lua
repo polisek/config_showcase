@@ -19,6 +19,18 @@ Config.PlayersOnline = {
     rob_atm = 1,
 } 
 
+-- Set the number of online cops needed for different activities.
+-- At the bottom of the file you will find Config.PoliceJob = there you can set all PD jobs.
+Config.CopsOnline = {
+    scrap_vehicle = 2,
+    rob_sign = 1,
+    rob_vent = 1,
+    rob_phonebox = 1,
+    rob_gum_machine = 1,
+    rob_atm = 1,
+} 
+
+
 Config.ScrapDestination = vector3(-576.5237, -1639.9725, 19.4127)
 
 --  https://overextended.github.io/docs/ox_lib/Interface/Client/skillcheck
