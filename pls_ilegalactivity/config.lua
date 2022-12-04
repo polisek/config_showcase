@@ -1,5 +1,15 @@
 Config = {}
 
+
+Config.MarkerSettigs = {
+    showMarker = true,
+}
+Config.DrawTextSettigs = {
+    showText = true,
+    text = "Hello world!",
+}
+ 
+
 -- Allow script parts
 Config.ScriptSettings = {
     scrapvehicles = true,
@@ -18,11 +28,10 @@ Config.PlayersOnline = {
     rob_gum_machine = 1,
     rob_atm = 1,
 } 
-
 -- Set the number of online cops needed for different activities.
 -- At the bottom of the file you will find Config.PoliceJob = there you can set all PD jobs.
 Config.CopsOnline = {
-    scrap_vehicle = 2,
+    scrap_vehicle = 1,
     rob_sign = 1,
     rob_vent = 1,
     rob_phonebox = 1,
@@ -32,6 +41,25 @@ Config.CopsOnline = {
 
 
 Config.ScrapDestination = vector3(-576.5237, -1639.9725, 19.4127)
+
+-----------------------------------------------
+----------- Custom functions ( Scrapyard ) ----
+-----------------------------------------------
+Config.CustomFunctions = false
+-- Custom Check
+-- Notify text if false in locale = only_npc_cars -- ,,This vehicle cannot be scrapped"
+function CanDeleteVehicleOrRemovePart(vehicle)
+    if IsEntityAMissionEntity(vehicle) then
+        return false
+    else
+        return true
+    end
+end
+-- Custom delete vehicle
+function DeleteCustomVehicle(vehicle)
+    print("CustomDelete: "..vehicle)
+    DeleteEntity(vehicle)
+end
 
 --  https://overextended.github.io/docs/ox_lib/Interface/Client/skillcheck
 -------------------------------
@@ -215,7 +243,7 @@ Config.PoliceJobs = {"police","sheriff"}
 Config.SignalToPolice = {
     removePart = {
         signal = true,
-        chance = 5, -- %
+        chance = 10, -- %
     },
     scrapvehicle = {
         signal = true,
